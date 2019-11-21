@@ -34,6 +34,7 @@ table {
       margin-left: 0.5rem;
       font-size: 0.8rem;
       border-radius: 12.5px;
+      border-color: yellow;
   }
 
   #Calculate{
@@ -44,6 +45,7 @@ table {
     margin-top: 0.8rem;
     font-size: 0.8rem;
     border-radius: 12.5px;
+    border-color: yellow;
   }
 
   #minusP,#minusS{
@@ -58,4 +60,7 @@ table {
     font-size: 1.2rem;
  }
   
-  
+  #subtotal,#tax,#total{
+      color:yellow;
+  }
+
