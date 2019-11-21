@@ -6,11 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
-    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="css/index.css">
 </head>
 
 <body>
-    <h1> ECommerce Checkout</h1>
+    <h1 style="color:white; text-align: center"> ECommerce Checkout</h1>
 
     <table>
         <tr>
@@ -31,15 +31,14 @@
             <td id="unitPriceS">$10.99</td>
             <td><label id="extendedpriceShirts">$0.00</label></td>
         </tr>
-        <tr>
-            <td><button id="Calculate">Calculate</button></td>
-        </tr>
-        <tr><td> Sub Total: <label id="subtotal"></label></td></tr>
-        <tr><td>Tax: <label id="tax"></label></td></tr> 
-        <tr><td> Total: <label id="total"></label></td></tr>   
     </table>
+
+    <button id="Calculate">Calculate</button>
+        <p> Sub Total: <label id="subtotal"></label></p>
+        <p>Tax: <label id="tax"></label></p>
+        <p>Total: <label id="total"></label></p>
     <div>
-        <p>Have a promo code?  <button id="promo">Click to enter promo</button></p> 
+        <p>Have a promo code? <button id="promo">Click to Enter Promo!</button></p>
     </div>
     <script src="js/index.js"></script>
 </body>
