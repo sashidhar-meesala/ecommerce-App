@@ -1,16 +1,19 @@
+//Variables for communicating with DOM
 let minusButtonP = document.getElementById("minusP");
 let plusButtonP = document.getElementById("plusP");
 let qtyLabelP = document.getElementById("quantityP");
-
-
 let minusButtonS = document.getElementById("minusS");
 let plusButtonS = document.getElementById("plusS");
 let qtyLabelS = document.getElementById("quantityS");
-
 let pantPriceLabel = document.getElementById("extendedpricePants");
 let shirtPriceLabel = document.getElementById("extendedpriceShirts");
 
 
+
+//FUNCTIONS
+
+
+//function to increase quantity of pants on click of '+' button
 function increaseQuantityP() {
     let qty = parseInt(qtyLabelP.innerHTML) + 1;
     qtyLabelP.innerHTML = qty;
@@ -18,7 +21,7 @@ function increaseQuantityP() {
 
 }
 
-
+//function to decrease quantity of pants on click of '-' button
 function descreaseQuantityP() {
     if(!parseInt(qtyLabelP.innerHTML)==0){
         let qty = parseInt(qtyLabelP.innerHTML) - 1;
@@ -33,7 +36,7 @@ function descreaseQuantityP() {
     }
     
 }
-
+//function to calculate the extended price of pants on click of both + and - buttons
 function extendedPriceP() {
     let price = parseInt(qtyLabelP.innerHTML) * 40.99;
     priceINT = price.toFixed(2);
@@ -42,7 +45,7 @@ function extendedPriceP() {
 }
 
 
-
+//function to increase quantity of shirts on click of '+' button
 function increaseQuantityS() {
     let qty = parseInt(qtyLabelS.innerHTML) + 1;
     qtyLabelS.innerHTML = qty;
@@ -50,7 +53,7 @@ function increaseQuantityS() {
 
 }
 
-
+//function to increase quantity of shirts on click of '-' button
 function descreaseQuantityS() {
     if(!parseInt(qtyLabelS.innerHTML)==0){
     let qty = parseInt(qtyLabelS.innerHTML) - 1;
@@ -65,6 +68,7 @@ function descreaseQuantityS() {
 }
 }
 
+//function to calculate the extended price of shirts on click of both + and - buttons
 function extendedPriceS() {
     let price = parseInt(qtyLabelS.innerHTML) * 10.99;
     priceINT = price.toFixed(2);
@@ -72,6 +76,8 @@ function extendedPriceS() {
     return price;
 }
 
+
+//functon to calculate the subtotal , tax and total amount to be paid on click of calculate button
 function calculateAll() {
     if(!parseInt(qtyLabelS.innerHTML)==0 ||!parseInt(qtyLabelP.innerHTML)==0){
         let subtotal = (extendedPriceP() + extendedPriceS()).toFixed(2);
@@ -89,6 +95,7 @@ function calculateAll() {
 }
 
 
+//function to take input from user for coupon
 function applycoupon() {
     const coupon = window.prompt("please enter the coupon code");
     //alert(`${coupon}`);
@@ -110,7 +117,7 @@ function applycoupon() {
     }
 }
 
-
+//function to validate notax promocode
 function notax(){
     let subtotal = (extendedPriceP() + extendedPriceS()).toFixed(2);
     subtotal =parseFloat(subtotal);
@@ -122,7 +129,7 @@ function notax(){
     alert("Promo Applied Successfully");
 }
 
-
+//function to validate fiftyfifty promocode
 function fiftyfifty(){
     let subtotal = (extendedPriceP() + extendedPriceS()).toFixed(2);
     subtotal =parseFloat(subtotal)/2;
@@ -137,7 +144,7 @@ function fiftyfifty(){
     alert("Promo Applied Successfully");
 }
 
-
+//event listeners of buttons
 minusButtonP.addEventListener("click", descreaseQuantityP);
 plusButtonP.addEventListener("click", increaseQuantityP);
 minusButtonS.addEventListener("click", descreaseQuantityS);
