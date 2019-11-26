@@ -82,6 +82,8 @@ function calculateAll() {
         document.getElementById("tax").innerHTML = '$'+tax;
         let total = (subtotal + tax).toFixed(2);
         document.getElementById("total").innerHTML = '$'+total;
+        document.getElementById("subtotal").style.backgroundColor= "transparent";
+        document.getElementById("tax").style.backgroundColor= "transparent";
     }
     
 }
@@ -130,6 +132,7 @@ function fiftyfifty(){
     tax=parseFloat(tax);
     document.getElementById("tax").innerHTML = '$'+tax;
     let total = subtotal + tax ;
+    total=total.toFixed(2);
     document.getElementById("total").innerHTML = '$'+total;
     alert("Promo Applied Successfully");
 }
