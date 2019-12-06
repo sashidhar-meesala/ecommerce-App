@@ -1,66 +1,81 @@
-body{
-    background-color: rgb(78, 69, 69);
-    color:white;
-    border-style: double;
-    border-width: 2px;
-    padding: 1rem;
-    text-align: center;
-    border-color: green yellow;
+body {
+  background-color: black;
+  border-style: double;
+  border-width: 2px;
+  padding: 1rem;
+  text-align: center;
+  border-color: green yellow;
 }
 
-table {
-    border-collapse:collapse;
-    width: auto;
-    margin-left:auto; 
-    margin-right:auto;
-  }
-  
-  th, td {
-    text-align: center;
-    padding: 8px;
-  }
-  
-  tr{background-color: rgb(112, 122, 112)}
-  
-  th {
-    background-color: rgb(248, 244, 16);
-    color: black;
-  }
+h1 {
+  color: black;
+}
 
-  #promo{
-    background-color:black;
-    color: white;
-      padding: 0.7rem;
-      margin-left: 0.5rem;
-      font-size: 0.8rem;
-      border-radius: 12.5px;
-      border-color: yellow;
-  }
+h2 {
+  margin-left: 1rem;
+}
 
-  #Calculate{
-    background-color:black;
-    color: white;
-    padding: 0.7rem;
-    margin-left: 0.5rem;
-    margin-top: 0.8rem;
-    font-size: 0.8rem;
-    border-radius: 12.5px;
-    border-color: yellow;
-  }
+.form_grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  background-image: linear-gradient(270deg, #ff8a00, #e52e71);
+  margin: 4em 0;
+  border-radius: 12.5px;
+  border-color: yellow;
+}
 
-  #minusP,#minusS{
-      background-color:red;
-      border-radius: 8px;
-      font-size: 1.2rem;
-  }
+.calculation_area {
+  color: white;
+}
 
- #plusP,#plusS{
-    background-color:green;
-    border-radius: 8px;
-    font-size: 1.2rem;
- }
-  
-  #subtotal,#tax,#total{
-      color:yellow;
-  }
+ul {
+  list-style: none;
+  margin: 1em;
+  color: rgb(255, 255, 255);
+  font-weight: bold;
+}
 
+li {
+  margin: 1em;
+}
+
+#promo {
+  background-color: black;
+  color: white;
+  padding: 0.7rem;
+  margin-left: 0.5rem;
+  font-size: 0.8rem;
+  border-radius: 12.5px;
+  border-color: yellow;
+}
+
+#Calculate {
+  background-color: black;
+  color: white;
+  padding: 0.7rem;
+  margin-left: 0.5rem;
+  margin-top: 0.8rem;
+  font-size: 0.8rem;
+  border-radius: 12.5px;
+  border-color: yellow;
+}
+
+#minusP,
+#minusS {
+  background-color: red;
+  border-radius: 8px;
+  font-size: 1.2rem;
+}
+
+#plusP,
+#plusS {
+  background-color: green;
+  border-radius: 8px;
+  font-size: 1.2rem;
+}
+
+#subtotal,
+#tax,
+#total {
+  color: yellow;
+}

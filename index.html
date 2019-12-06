@@ -11,34 +11,55 @@
 
 <body>
     <h1 style="color:white; text-align: center"> ECommerce Checkout</h1>
-    <table>
-        <tr>
-            <th>Product</th>
-            <th>Quantity</th>
-            <th>Unit Price </th>
-            <th>Extended Price</th>
-        </tr>
-        <tr>
-            <td>Pants</td>
-            <td><button id="minusP"> - </button> <label id="quantityP">0</label> <button id="plusP"> +</button></td>
-            <td id="unitPriceP">$40.99</td>
-            <td><label id="extendedpricePants">$0.00</label></td>
-        </tr>
-        <tr>
-            <td>Shirts</td>
-            <td><button id="minusS"> - </button> <label id="quantityS">0</label> <button id="plusS"> +</button></td>
-            <td id="unitPriceS">$10.99</td>
-            <td><label id="extendedpriceShirts">$0.00</label></td>
-        </tr>
-    </table>
-
-    <button id="Calculate">Calculate</button>
-    <p> Sub Total: <label id="subtotal"></label></p>
-    <p>Tax: <label id="tax"></label></p>
-    <p>Total: <label id="total"></label></p>
-    <div>
-        <p>Have a promo code? <button id="promo">Click to Enter Promo!</button></p>
-    </div>
+    <article class="form_grid">
+        <section>
+            <h2>Product</h2>
+            <ul>
+                <li>
+                    <h3>Pants</h3>
+                </li>
+                <li>
+                    <h3>Shirts</h3>
+                </li>
+            </ul>
+        </section>
+        <section>
+            <h2>Quantity</h2>
+            <ul>
+                <li><button id="minusP"> - </button> <label id="quantityP">0</label> <button id="plusP"> +</button></li>
+                <li><button id="minusS"> - </button> <label id="quantityS">0</label> <button id="plusS"> +</button></li>
+            </ul>
+        </section>
+        <section>
+            <h2>Unit Price</h2>
+            <ul>
+                <li>
+                    <p id="unitPriceP">$10.99</p>
+                </li>
+                <li>
+                    <p id="unitPriceS">$10.99</p>
+                </li>
+            </ul>
+        </section>
+        <section>
+            <h2>Extended Price</h2>
+            <ul>
+                <li>
+                    <p id="extendedpricePants">$0.00</p>
+                </li>
+                <li>
+                    <p id="extendedpriceShirts">$0.00</p>
+                </li>
+            </ul>
+        </section>
+    </article>
+    <section class="calculation_area">
+        <button id="Calculate">Calculate</button>
+        <h3> Sub Total: <label id="subtotal"></label>
+            <h3>Tax: <label id="tax"></label></h3>
+            <h3>Total: <label id="total"></label></h3>
+            <h3>Have a promo code? <button id="promo">Click to Enter Promo!</button></h3>
+    </section>
     <script src="js/index.js"></script>
 </body>
 
